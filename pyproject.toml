@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "html-poster-to-png-mcp"
+version = "1.0.0"
+description = "MCP server: render self-contained HTML layouts into crisp forwardable PNGs via headless Chrome"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.11"
+dependencies = ["mcp>=1.8", "Pillow>=10"]
+
+[project.scripts]
+html-poster-to-png-mcp = "server:main"
+
+[tool.setuptools]
+py-modules = ["server"]
